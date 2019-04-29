@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="559.0" prefWidth="600.0" stylesheets="@fxHelpers_basicStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxIllustratorColorParser.IllustratorColorParserController">
+   <children>
+      <VBox layoutX="192.0" layoutY="76.0" prefHeight="400.0" prefWidth="600.0" styleClass="vbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" styleClass="spacing10">
+               <children>
+                  <ImageView fitHeight="59.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/illustratorColorParserIcon300.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="heading" text="Illustrator Color Parser" />
+               </children>
+            </HBox>
+            <Label prefHeight="67.0" prefWidth="600.0" text="Quickly export the named color swatches from an illustrator file. Convert them to JavaFX-CSS Syntax, ready to be used as color definitions in your .root class. This helps to keep consistency between designers and developers." wrapText="true" />
+            <HBox prefHeight="19.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="filename_txtfld" prefHeight="31.0" prefWidth="429.0" promptText="Your Illustrator File" />
+                  <Button mnemonicParsing="false" onAction="#chooseFile" text="..." />
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="561.0" text="Select how the colors should be formatted for output:" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="600.0" styleClass="spacing10">
+                     <children>
+                        <RadioButton fx:id="radio_hex_plain" mnemonicParsing="false" text="Plain Hex" />
+                        <RadioButton fx:id="radio_rgb_plain" mnemonicParsing="false" text="Plain RGB" />
+                        <RadioButton fx:id="radio_hex_css" mnemonicParsing="false" text="CSS-Hex" />
+                        <RadioButton fx:id="radio_rgb_css" mnemonicParsing="false" text="CSS-RGB" />
+                        <Button mnemonicParsing="false" onAction="#parseColors" text="Parse Colors">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/colorparser-arrows.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextArea fx:id="txtarea_output" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="code" />
+            <Button mnemonicParsing="false" onAction="#copyToClipboard" text="Copy Code to Clipboard" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

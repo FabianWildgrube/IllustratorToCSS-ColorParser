@@ -1,0 +1,41 @@
+<idea-plugin>
+  <id>de.zeiss.ux.illustratorcolorparser</id>
+  <name>Illustrator Color Parser</name>
+  <version>1.0</version>
+  <vendor email="fabian.wildgrube@zeiss.com" url="http://www.zeiss.com">Zeiss Meditec AG</vendor>
+
+  <description><![CDATA[
+      Paste colors from Adobe Illustrator files (i.e. styleguides from design department) into your code<br>
+      Work hand in hand with designers by using consistent color names throughout design and development phases.<br>
+      No more painful clicking through huge illustrator files
+    ]]></description>
+
+  <change-notes><![CDATA[
+      First Build, work in progress<br>
+      <em>This plugin only supports Adobe Illustrator Files</em><br>
+      <em>Only color swatches will be converted, whose names were changed from the default "R=123, G=224, B=142"</em><br>
+      <em>Gradient conversion is not supported (yet)</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="IllustratorColorParserAction" class="IllustratorColorParserAction" text="Parse Colors from .ai file"
+            description="Parse Colors from an Adobe Illustrator File">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>

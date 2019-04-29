@@ -1,0 +1,238 @@
+.root {
+    -fx-overall-background: #EFEFEF;
+    -fx-dark-border: rgba(40, 40, 40, 0.3);
+    -fx-very-light-background: rgba(235, 235, 235, 1.0);
+    -fx-light-background: rgba(130, 130, 130, 1.0);
+    -fx-middle-background: rgba(100, 100, 100, 1.0);
+    -fx-dark-background: rgba(80, 80, 80, 1.0);
+    -fx-very-dark-background: rgba(40, 40, 40, 1.0);
+}
+
+.vbox {
+    -fx-padding: 20 10 10 10;
+    -fx-spacing: 20;
+}
+
+.spacing10 {
+    -fx-spacing: 10 ;
+}
+
+.padding10 {
+    -fx-padding: 10 ;
+}
+
+/*##########################################################################################################################*/
+/*############################# TEXTS ######################################################################################*/
+/*##########################################################################################################################*/
+
+.label,
+.text-field,
+.combo-box .text-input,
+.combo-box .list-cell,
+.button,
+.text-area {
+    -fx-font-family: "Droid Sans Pro";
+    -fx-font-size: 14;
+}
+
+.heading {
+    -fx-font-family: "Droid Sans Pro Bold";
+    -fx-font-size: 18;
+    -fx-text-fill: -fx-very-dark-background;
+}
+
+.radio-button:focused .radio,
+.button:focused,
+.text-field:focused,
+.text-area:focused {
+    -fx-border-color: -fx-dark-border;
+    -fx-border-radius: 0;
+    -fx-border-insets: -2;
+}
+
+
+/*##########################################################################################################################*/
+/*############################# BUTTONS ####################################################################################*/
+/*##########################################################################################################################*/
+
+.button {
+    -fx-background-color: -fx-middle-background;
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 13;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: -fx-light-background;
+}
+
+/*##########################################################################################################################*/
+/*############################# SPINNER-BUTTON##############################################################################*/
+/*##########################################################################################################################*/
+
+.spinner-button {
+    -fx-padding: -2 5 -2 5;
+}
+
+.spinner-button:focused {
+    -fx-border-width: 0;
+}
+
+.spinner-button .arrow {
+    -fx-background-color: white;
+    -fx-pref-height: 5;
+    -fx-min-height: 5;
+    -fx-max-height: 5;
+    -fx-pref-width: 5;
+    -fx-min-width: 5;
+    -fx-max-width: 5;
+}
+
+.spinner-button-up .arrow {
+    -fx-shape: "M6.5,0,9.69,4l3.19,4H.11L3.31,4Z";
+}
+
+.spinner-button-up,
+.spinner-button-up:focused {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: white;
+}
+
+.spinner-button-down .arrow {
+    -fx-shape: "M6.5,8,3.31,4,.11,0H12.89L9.69,4Z";
+}
+
+/*##########################################################################################################################*/
+/*############################# TEXT-FIELD #################################################################################*/
+/*##########################################################################################################################*/
+
+.text-field {
+    -fx-alignment: center-left;
+    -fx-background-radius: 0, 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-field:focused {
+    -fx-border-radius: 0;
+}
+
+.code {
+    -fx-font-family: "Consolas";
+    -fx-font-size: 14;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/*##########################################################################################################################*/
+/*############################# RADIO-BUTTONS ##############################################################################*/
+/*##########################################################################################################################*/
+.radio-button .radio {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: -fx-dark-border, white;
+    -fx-background-radius: 0;
+}
+
+.radio-button:hover .radio {
+    -fx-background-color: -fx-dark-border, -fx-very-light-background;
+}
+
+.radio-button .radio .dot {
+    -fx-background-radius: 0;
+    -fx-pref-width: 2;
+    -fx-pref-height: 2;
+    -fx-shape: "M11.61,16a.74.74,0,0,1-.58-.28L9.15,13.36a.68.68,0,0,1,.14-1,.76.76,0,0,1,1,.13l1.23,1.55,3.1-4.75a.75.75,0,0,1,1-.22.68.68,0,0,1,.23,1l-3.66,5.61a.74.74,0,0,1-.59.33Z";
+}
+
+.radio-button .radio .dot {
+    -fx-background-color: transparent;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: -fx-middle-background;
+    -fx-translate-y: -1;
+}
+
+
+/*##########################################################################################################################*/
+/*############################# COMBO-BOX ##################################################################################*/
+/*##########################################################################################################################*/
+.combo-box {
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+}
+
+.combo-box:focused {
+    -fx-border-radius: 0;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;
+    /* 2 4 2 4 */
+}
+
+.combo-box-popup *.list-view {
+    -fx-background-insets: 0, 1;
+    -fx-translate-y: 1; }
+
+.combo-box-base:editable,
+.combo-box-base:editable:hover,
+.combo-box-base:editable:pressed,
+.combo-box-base:editable:showing,
+.combo-box-base:editable:showing:hover {
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+    -fx-effect: null;
+    -fx-padding: 0 0 -1 0; }
+
+.combo-box-base:editable .text-field,
+.combo-box-base:editable .arrow-button {
+    -fx-border-width: 0;
+}
+
+/*##########################################################################################################################*/
+/*############################# COLOR-PICKER################################################################################*/
+/*##########################################################################################################################*/
+.color-picker,
+.combo-box{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: -fx-dark-border, white;
+    -fx-background-insets: 0, 1;
+}
+
+.color-palette {
+    -fx-background-color: -fx-dark-border, white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+
+
+.slider .track {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-dark-border;
+    -fx-border-style: solid;
+    -fx-border-width: 1 0 1 0;
+    -fx-pref-height: 1;
+}
+
+.slider .thumb {
+    -fx-background-color: -fx-dark-background;
+    -fx-background-radius: 0;
+    -fx-pref-height: 15;
+    -fx-pref-width: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0.2, 1, 1);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: -fx-middle-background;
+}
+
+.slider .thumb:pressed {
+    -fx-background-color: -fx-dark-background;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 0, 0.2, 1, 1);;
+}
+
+
